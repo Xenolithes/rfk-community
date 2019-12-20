@@ -19,6 +19,7 @@ import WhoAreWe from './routes/who-are-we/';
 import Survey from './routes/survey/';
 import Nav from './Nav';
 import BottomNav from './BottomNav';
+import MapComp from './routes/Map/index.js';
 
 window.isMobile = false; //initiate as false
 // device detection
@@ -38,14 +39,15 @@ function App({ classes }) {
     <Router>
       <div className="App">
         <Nav />
-        <BackgroundImagePage />
-        <BackgroundDOMContainer>
-          <div style={{ height: '100%' }}>
-            <Route exact path="/" component={Home} />
-            <Route exact path="/who-are-we" component={WhoAreWe} />
-            <Route exact path="/survey" component={Survey} />
-          </div>
-        </BackgroundDOMContainer>
+        {/*<BackgroundImagePage */}
+        {/*<BackgroundDOMContainer>*/}
+        <div style={{ height: '100%' }}>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/who-are-we" component={WhoAreWe} />
+          <Route exact path="/survey" component={Survey} />
+          <Route exact path="/map" component={MapComp} />
+        </div>
+        {/*</BackgroundDOMContainer>*/}
       </div>
     </Router>
   );

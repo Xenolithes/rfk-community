@@ -76,6 +76,16 @@ const Nav = ({ history, classes, location, theme }) => {
           <Grid item style={{ marginRight: theme.spacing(4) }}>
             <Link
               onClick={() => {
+                history.push('/map');
+              }}
+              variant="h7"
+              className={classes.navBarSecondary}>
+              Map
+            </Link>
+          </Grid>
+          <Grid item style={{ marginRight: theme.spacing(4) }}>
+            <Link
+              onClick={() => {
                 history.push('/who-are-we');
               }}
               variant="h7"
